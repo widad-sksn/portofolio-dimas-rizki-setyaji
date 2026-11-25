@@ -1,0 +1,1 @@
+Tempatkan font berlisensi milik Anda sebagai `pricedown.woff2` atau `pricedown.ttf`. Mulai ulang dev server atau build ulang. WOFF2 diprioritaskan jika keduanya tersedia. Tanpa berkas tersebut proyek memakai Anton dari Google Fonts.

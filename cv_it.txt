@@ -1,0 +1,247 @@
+=== FILE: C:\Users\Sholis\Downloads\CV Dimas Rizki Setyaji IT BING.pdf ===
+
+--- PAGE 1 ---
+PROFIL  
+Inform ation Technology graduate with experience in information systems development and support, web-
+based application development, website management, DevOps, IT infrastructure, and information security.
+Experienced in supporting various technology projects, including system development, application and
+infrastructure configuration, troubleshooting, and digital platform maintenance.
+Skilled in database management, SQL, application development, web-based  systems, Linux, Docker, and
+technical support. Experienced in analyzing technical requirements, troubleshooting system issues, preparing
+technical documentation, and collaborating with both technical and non-technical teams.
+Strong interest in information systems management, data management, system administration, information
+security, and technology-based service development, with a strong focus on data accuracy, information
+security, system reliability, and operational efficiency.
+CORE COMPETENCIES
+D I M A S  R I Z K I  S E T Y A J I
+ A d d r e s s :
+P h o n e :
+E m a i l :  
+P e r u m  G r e e n  R i v e r  P a r k  B l o k  A 5 / 1 5 , B o t e n g ,  M e n g a n t i ,  G r e s i k
+ 0 8 2 2 - 3 4 4 4 - 1 4 5 6
+d i m a s r i z k i s e t y a j i @ g m a i l . c o m
+T a r g e t  R o l e :    I n f o r m a t i o n  S y s t e m  &  D a t a  M a n a g e m e n t  S p e s i a l i s t
+Information Systems
+Information Systems Support
+Systems Analysis
+Applicatio n Support
+Technical Troubleshooting
+Technical Documentation
+Systems R equirements Analysis
+Database & Data
+MySQL
+SQL
+Database Management
+Data Processing
+Data Validation
+Database Structure
+Application & Web Development
+PHP
+Laravel
+J avaScript
+HTML
+CSS
+WordPr ess
+Infrastructure & DevOps
+Linux
+Docker
+Git
+Server Co nfiguration
+Application Deployment
+D evOps Support
+Information Security
+Cybersecurity
+Security Assessment
+Incident Analysis
+Digital Forensics
+Security Monitoring
+--- PAGE 2 ---
+Supported the  operation and maintenance of information technology systems within an institutional
+environment.
+Assisted in identifying, analyzing, and r esolv ing technical and system-related issues.
+Support ed activities related to information security and incident analysis.
+P erformed troubleshooting for system and infrastructure issues.
+C ollaborated with technical teams to address information technology problems.
+Assist ed with technical documentation and follow-up on identified issues.
+Key C ompetencies:
+System Support · Technical Troubleshooting · Cybersecurity · Incident Analysis · IT Operations
+Role:  DevOps Support / Front-End Support
+Support ed  the technical development and implem entation of a system involving integr ation with BPJS
+services.
+Assist ed in implementing front- end components accord ing to system requirements.
+Support ed system configuration and deployment.
+Assisted with troubleshooting to ensure the system operated according to project requirements.
+C ollaborated with the project team during system implementation and technical issue resolution.
+Technologies / C ompetencies:
+ System Integration · Front-End · DevOps · Troubleshooting · Technical Support
+Role: System Architecture / DevOps
+Designed and supported the technical architecture of an online queueing system.
+Us ed Docker for application deployment and manageme nt .
+S upported server environment and application service configuration.
+Applied infrastructure and deployment concepts to improve system reliability.
+Support ed the management of multiple application services within a server environment.
+Technologies / C ompetencies:
+ System Architecture · Docker · Linux · DevOps · Application Infrastructure
+Supported IT operations and application infrastructure within a healthcare environment.
+Assisted in the development and impl ementation of  web-based applications.
+Support ed application configuration and deployment in Linux environments.
+P erformed troubleshooting for application and infrastructure issues.
+C ollaborated with technical teams during system development and implementation.
+S upported technical requirements for digital service development projects.
+Key C ompetencies:
+Application Support · Linux · Web Development · DevOps · Troubleshooting
+March 2024 – August 2026
+October 2024 – January 2025
+BPTSI CSIRT — Universitas 'Aisyiyah Yogyakarta
+BPJS Bridging System
+Online Queueing System Integrated with BPJS
+RSU Queen Latifa - Yogyakarta
+PR OFESSIONAL EXPERIENCE
+SELECTED IT PR OJECT S
+Communication & Operatio ns
+Technical Documentation
+Stakeholde r Communication
+Problem Solving
+T eamwork
+A nalytical Problem Solving
+--- PAGE 3 ---
+Role: Application Architecture & Build Configuration Support
+Supported application architecture design.
+Assisted with application build configuration requirements.
+S upported technical configuration throughout the application development process.
+Help ed ensure that application components functioned according to project requirements.
+Competencies :
+ Application Support · System Architecture · Configuration · Troubleshooting
+APM Mobile
+Role: Web Developer / Website Support
+Developed and managed website components using web technologies.
+Managed and updated website content.
+Support ed improvements to website structure and interface.
+Performed website maintenance and technical improvements.
+Technologies :
+ PHP · Laravel · JavaScript · HTML · CSS · WordPress
+PSTI Website
+Supported information security incident analysis activities.
+Assist ed in conducting security assessments of systems.
+I dentified pot ential  security issues within digital systems.
+S upported incident analysis and documentation processes.
+A pplied information security principles in system management.
+Possess a foundational understanding of digital forensics and security investigations.
+C ompetencies:
+Cybersecurity · Security Assessment · Incident Response · Digital Forensics · Information Security
+Cybersecurity / CSIRT
+INF ORMA TION SECURIT Y EXPERIENCE
+EDUCATION
+Universitas ‘Aisyiyah Yogyakarta
+Bachelor of Information Technology
+Information Systems
+D atabase Management
+Programming
+Web Development
+Software Engineering
+Computer Networks
+Information Security
+Systems Analysis
+SMKN 1 Cerme Gresik
+S ekolah Menengah Kejuruan, Jurusan Multimedia
+2022 – 2026
+2019 – 2022
+2025–2026
+Universitas 'Aisyiyah Yogyakarta
+Mengkoordinasikan kegiatan organisasi yang melibatkan beberapa divisi dan anggota.
+Mengelola per enc anaan dan pelaksanaan program kerja.
+B erkoordinasi dengan pihak internal maupun eksternal.
+Mengembangkan kemampuan kep emi mpinan, komunikasi, koordinasi, dan pemecahan masalah.
+Head Of Faculty of Science and Technology Student Executive Board (BEM FST)
+OR G ANIZA TIONAL EXPERIENCE
+
+--- PAGE 4 ---
+Universitas 'Aisyiyah Yogyakarta
+Led the stude nt organization at the Information Technology program level.
+C oordinated committee members in pla n ning and implementing organizational programs.
+Ma naged communication and coordina tion with students, academic departments, and relevant
+stakeholders.
+Supervised program implementation and ensured activities were carried out according to targets.
+D eveloped organizational ma nagement, teamwork, leadership, and problem-solving skills.
+Coordinated activities and requirements related to curriculum development.
+Assisted in preparing, managing, and evaluating program requirements.
+Coordinated with members and relevant stakeholders during program implementation.
+S upported administrative, documentation, and evaluation processes.
+D eveloped analytical, coordination, administrative, and program management skills.
+Head Of Information Technology Student Association (ITECH)
+Curriculum Coordinator — Cyber Security Community, Mpu Gandrinx
+2024–2025
+2024–2025
+Experienced in managing digital requirements for multiple institutional clients, including:
+Word Pr ess-based website management.
+W ebsite content and information updates.
+Di gital platform managem ent.
+Client and stakeholder co ordination.
+Digital content management.
+Technical support for websites and digital platforms.
+Cli ents:
+Information Technology — Universitas 'Aisyiyah Yogyakarta
+Faculty of Science and Technology — Universitas 'Aisyiyah Yogyakarta
+Bachelor of  Biotechnology — Universitas 'Aisyiyah Yogyakarta
+Silv er Medal — R akornas AST PTMA Bukittinggi 2023
+Software Application Development Category
+Earned national-level recognition for software application development and innovation.
+Silver Medal — Rakornas AST PTMA Yogyakarta 2024
+Software Application Developm ent Category
+Received a national-level award for s oftware application development performance and competitiveness.
+Participant — Gemastik 2025
+Cyber Security (CTF) Category
+Participat ed in national-level cybersecurity challenges focused on Capture the Flag (CTF), technical
+problem-solving, and security analysis.
+Programming
+PHP · Laravel · JavaScript · HTML · CSS
+Database
+MySQL · SQL
+Infrastructur e
+Linux · Docker · Git
+C MS
+WordPress
+UI/UX
+Figma
+Cyb ersecurity
+Security Assessment · Digital Forensics · Cybersecurity Tools
+Digital Marketing & Website Management — HITS
+ADDITIONAL EXPERIENCE
+A CHIEVEMENT S & COMPETITIONS
+T OOLS & TECHNOL OGIES
+
+--- PAGE 5 ---
+Partic ipant — Gem astik 2022 & 2023
+UI/UX Category
+Participated in national-level comp etitions focus ed on digital product design, user interf ac e, and user
+experience development.
+Dig ital Forensic Analysis of Keyl ogger Attack Evidence on Websites Using the NIST Method
+Conducted digital forensic analysis of suspected keylogger attack evidence on a WordPress-based
+website.
+Applied the NIST SP 800-86 digital forensic methodology integrated with MITRE ATT&CK.
+Identified database-injected fileless malware artifacts within the wp_options table.
+Mapped the attack chain across Initial Access, Persistence, Collection, and Exfiltration stages.
+Conducted a comparative security assessment between WordPress and an AI-based system, examining
+the impact of plugin-based architecture on attack surfaces and vulnerability exposure.
+Areas : Digital Forensics · Cybersecurity · WordPress Security · MITRE ATT&CK · NIST SP 800-86
+S ibermuda.idn — Cyb er Security Attacker
+Studied foundational penetration testing concepts, attack methodologies, security tools, and ethical
+cybersecurity practices.
+IDC amp — DevOps Engineer
+Studied DevOps principles, application delivery workflows, and CI/CD implementation practices.
+Dic oding — Cyber Security
+Developed foundational knowledge of  computer networking, system security, and core cybersecurity
+concepts.
+In tegrated Online Queue Syst em Architecture for BPJS Services at RSU Queen Latifa
+Contributed to the design and architec tural planning of an online queue management system integrated
+with BPJS services.
+Appl ied Docker-based deployment concepts to support system scalability, consistency, and operational
+readiness.
+Contributed to the development of an architecture designed to support digital healthcare service
+operations.
+Areas : System Architecture · Docker · BPJS Integration · DevOps · Healthcare Technology
+RESEAR CH & JOURNAL PUBLIC A TIONS
+TRAINING & BOO T C AMPS
+2025
+2024
+2024

@@ -1,0 +1,888 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@font-face {
+  font-family: "Pricedown";
+  src: url("/fonts/pricedown.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-sub,
+.subheadline,
+.role-org,
+.card-subhead,
+.gta-subhead {
+  font-family: var(--face-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #09040e;
+  --bg-surface: #130a1c;
+  --bg-card: rgba(26, 12, 38, 0.75);
+  --border-neon: rgba(255, 42, 133, 0.3);
+  --pink: #ff2a85;
+  --orange: #ff7a45;
+  --yellow: #ffe600;
+  --cyan: #00f0ff;
+  --violet: #9d4edd;
+  --copy: #e2d9e8;
+  --copy-muted: #9f8ea8;
+  --gta-gradient: linear-gradient(135deg, #ff2a85 0%, #ff7a45 52%, #ffe600 100%);
+  --gta-glow: 0 0 25px rgba(255, 42, 133, 0.4), 0 0 50px rgba(255, 122, 69, 0.2);
+}
+
+* { box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #fff;
+  font-family: var(--face-body), Arial, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Subtle GTA VI CRT Scanline Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.12) 0px,
+    rgba(0, 0, 0, 0.12) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  opacity: 0.65;
+}
+
+/* Film grain */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 98;
+  pointer-events: none;
+  opacity: 0.038;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23n)' d='M0 0h200v200H0z'/%3E%3C/svg%3E");
+}
+
+:focus-visible { outline: 2px solid var(--yellow); outline-offset: 4px; }
+a { color: inherit; text-decoration: none; }
+
+.skip { position: fixed; top: -5rem; left: 1rem; z-index: 100; background: #000; padding: .7rem; }
+.skip:focus { top: 1rem; }
+
+.wrap { width: min(1280px, 92%); margin-inline: auto; }
+
+/* GTA VI Navigation HUD */
+.site-nav {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  inset-inline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  background: linear-gradient(180deg, rgba(9, 4, 14, 0.95) 0%, rgba(9, 4, 14, 0.75) 60%, transparent 100%);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 42, 133, 0.2);
+}
+
+.site-nav nav, .footer-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(.8rem, 2.5vw, 2.2rem);
+}
+
+.site-nav nav {
+  font-size: clamp(.78rem, 1.4vw, .95rem);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: 700;
+}
+
+.site-nav a {
+  position: relative;
+  transition: color .2s, text-shadow .2s;
+}
+
+.site-nav a:hover {
+  color: var(--yellow);
+  text-shadow: 0 0 12px var(--yellow);
+}
+
+/* Headings & Subheadings with Anton / Impact font */
+.wordmark,
+h1,
+h2,
+h3,
+h4,
+.stats dd,
+.project-title,
+.font-display,
+.mission-badge,
+.hero-vi-watermark,
+.gta-vi-badge {
+  font-family: "Pricedown", var(--face-display), "Anton", Impact, sans-serif;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1.02;
+}
+
+/* Wordmark & Headers with GTA aesthetic */
+.wordmark {
+  font-size: 2.3rem;
+  letter-spacing: .02em;
+  background: var(--gta-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(255, 42, 133, 0.5));
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+}
+
+.gta-vi-badge {
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--yellow);
+  text-shadow: 0 0 8px var(--pink);
+  transform: skewX(-6deg);
+}
+
+h2 {
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+  letter-spacing: .02em;
+  background: var(--gta-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 3px 12px rgba(255, 42, 133, 0.4));
+  margin: 0;
+}
+
+h3 {
+  font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+  letter-spacing: .02em;
+}
+
+/* GTA VI Hero Section */
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  background: radial-gradient(circle at 75% 25%, #42123c 0%, #1e092b 45%, #09040e 100%);
+}
+
+.hero-art, .hero-shade { position: absolute; inset: 0; z-index: -2; }
+.hero-shade {
+  z-index: -1;
+  background:
+    linear-gradient(to top, #09040e 0%, rgba(9, 4, 14, 0.6) 35%, transparent 75%),
+    linear-gradient(90deg, rgba(9, 4, 14, 0.92) 0%, rgba(20, 8, 30, 0.65) 50%, transparent 88%),
+    radial-gradient(circle at 80% 30%, rgba(255, 42, 133, 0.28) 0%, transparent 60%);
+}
+
+/* Giant Watermark Roman Numeral "VI" */
+.hero-vi-watermark {
+  position: absolute;
+  right: -2%;
+  top: 10%;
+  font-size: clamp(16rem, 38vw, 42rem);
+  line-height: .75;
+  font-weight: 900;
+  letter-spacing: -.05em;
+  background: linear-gradient(160deg, rgba(255, 42, 133, 0.35) 0%, rgba(255, 122, 69, 0.22) 50%, rgba(255, 230, 0, 0.08) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+  z-index: -1;
+  user-select: none;
+  filter: blur(1px) drop-shadow(0 0 60px rgba(255, 42, 133, 0.25));
+  transform: skewX(-5deg);
+}
+
+.hero-copy {
+  padding-block: 8.5rem clamp(4rem, 10vh, 7rem);
+  position: relative;
+  z-index: 2;
+}
+
+.hero-hud-ticker {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  padding: .35rem .9rem;
+  background: rgba(255, 42, 133, 0.16);
+  border: 1px solid rgba(255, 42, 133, 0.4);
+  border-radius: 4px;
+  font-size: .78rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 0 15px rgba(255, 42, 133, 0.2);
+}
+
+.rec-dot {
+  width: .65rem;
+  height: .65rem;
+  background: #ff1c48;
+  border-radius: 50%;
+  animation: pulse-rec 1.4s ease-in-out infinite;
+  box-shadow: 0 0 8px #ff1c48;
+}
+
+@keyframes pulse-rec {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.25; transform: scale(0.85); }
+}
+
+.hero h1 {
+  font-size: clamp(3.8rem, 10.5vw, 9.8rem);
+  line-height: .96;
+  letter-spacing: .01em;
+  color: #fff;
+  margin: 0;
+}
+
+.hero h1 .highlight {
+  background: var(--gta-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+
+/* Faulty / Broken Neon Sign Flicker for DIMAS RIZKI with Solid Vibrant Gradient Fill */
+.neon-broken-sign {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff2a85 0%, #ff7a45 50%, #ffe600 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: none !important;
+  animation: broken-neon-flicker 4s infinite ease-in-out;
+  position: relative;
+  will-change: opacity, filter;
+}
+
+@keyframes broken-neon-flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 81%, 85%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 25px rgba(255, 42, 133, 0.95)) drop-shadow(0 0 50px rgba(255, 122, 69, 0.65));
+  }
+  19% {
+    opacity: 0.18;
+    filter: drop-shadow(0 0 4px rgba(255, 42, 133, 0.25));
+  }
+  20% {
+    opacity: 0.95;
+    filter: drop-shadow(0 0 20px rgba(255, 42, 133, 0.85));
+  }
+  21% {
+    opacity: 0.12;
+    filter: none;
+  }
+  24% {
+    opacity: 0.32;
+    filter: drop-shadow(0 0 6px rgba(255, 42, 133, 0.35));
+  }
+  54% {
+    opacity: 0.15;
+    filter: none;
+  }
+  55% {
+    opacity: 0.98;
+    filter: drop-shadow(0 0 30px rgba(255, 42, 133, 1)) drop-shadow(0 0 55px rgba(255, 230, 0, 0.75));
+  }
+  56% {
+    opacity: 0.22;
+    filter: none;
+  }
+  82% {
+    opacity: 0.25;
+    filter: drop-shadow(0 0 6px rgba(255, 42, 133, 0.35));
+  }
+  83% {
+    opacity: 0.92;
+    filter: drop-shadow(0 0 22px rgba(255, 42, 133, 0.9));
+  }
+  84% {
+    opacity: 0.18;
+    filter: none;
+  }
+}
+
+.hero p {
+  margin: 1.5rem 0 2rem;
+  font-size: clamp(1.05rem, 2vw, 1.45rem);
+  color: var(--copy);
+  max-width: 42rem;
+  line-height: 1.6;
+}
+
+/* Wanted Stars HUD */
+.wanted-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+
+.wanted-star {
+  color: #3d234a;
+  font-size: 1.35rem;
+  transition: all .25s ease;
+}
+
+.wanted-star.active {
+  color: var(--yellow);
+  text-shadow: 0 0 12px rgba(255, 230, 0, 0.8), 0 0 24px rgba(255, 42, 133, 0.6);
+  animation: star-pulse 2s ease-in-out infinite;
+}
+
+@keyframes star-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+/* Buttons */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.4rem;
+  background: var(--gta-gradient);
+  color: #110515;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding: .95rem 1.7rem;
+  border-radius: 4px;
+  font-size: .95rem;
+  box-shadow: 0 0 25px rgba(255, 42, 133, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: transform .2s, box-shadow .2s, filter .2s;
+  cursor: pointer;
+}
+
+.cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 35px rgba(255, 230, 0, 0.65), 0 0 60px rgba(255, 42, 133, 0.4);
+  filter: brightness(1.08);
+}
+
+.cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(22, 10, 32, 0.85);
+  border: 1px solid rgba(255, 42, 133, 0.4);
+  color: var(--yellow);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding: .95rem 1.6rem;
+  border-radius: 4px;
+  font-size: .95rem;
+  transition: all .2s;
+}
+
+.cta-secondary:hover {
+  border-color: var(--yellow);
+  background: rgba(255, 42, 133, 0.2);
+  box-shadow: 0 0 20px rgba(255, 42, 133, 0.4);
+}
+
+/* Sections */
+.section {
+  padding-block: clamp(3.5rem, 8vw, 7rem);
+  border-bottom: 1px solid rgba(255, 42, 133, 0.18);
+  position: relative;
+}
+
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-head a, .view-all-link {
+  color: var(--yellow);
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: .9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  transition: color .2s, transform .2s;
+}
+
+.section-head a:hover, .view-all-link:hover {
+  color: var(--pink);
+  transform: translateX(4px);
+  text-shadow: 0 0 10px var(--pink);
+}
+
+/* Cards & Dossier in GTA style */
+.gta-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 42, 133, 0.25);
+  border-radius: 8px;
+  padding: 1.8rem;
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.gta-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gta-gradient);
+  opacity: 0.7;
+}
+
+.gta-card:hover {
+  border-color: var(--pink);
+  box-shadow: 0 0 30px rgba(255, 42, 133, 0.28);
+  transform: translateY(-4px);
+}
+
+/* Mission Passed / Respect Badge */
+.mission-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .3rem .8rem;
+  background: linear-gradient(90deg, #ffe600, #ff7a45);
+  color: #110515;
+  font-size: .9rem;
+  letter-spacing: .06em;
+  font-weight: 900;
+  border-radius: 3px;
+  box-shadow: 0 0 12px rgba(255, 230, 0, 0.4);
+}
+
+/* Classified / Evidence Stamp */
+.evidence-stamp {
+  display: inline-block;
+  padding: .35rem .75rem;
+  border: 2px dashed #ff2a85;
+  color: #ff2a85;
+  font-weight: 800;
+  font-size: .75rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  transform: rotate(-3deg);
+  background: rgba(255, 42, 133, 0.08);
+  box-shadow: 0 0 10px rgba(255, 42, 133, 0.3);
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.stats .stat-item {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 42, 133, 0.25);
+  border-radius: 8px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+.stats dd {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: .95;
+  background: var(--gta-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 10px rgba(255, 42, 133, 0.4));
+  margin: 0;
+}
+
+.stats dt {
+  margin-top: .9rem;
+  color: var(--yellow);
+  font-size: .95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+/* Projects grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.8rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 42, 133, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+  transition: all .25s ease;
+}
+
+.project:hover {
+  border-color: var(--pink);
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 42, 133, 0.35);
+}
+
+.project-art {
+  position: relative;
+  aspect-ratio: 16/10;
+  width: 100%;
+  overflow: hidden;
+  background: #1e0d2b;
+}
+
+.project-art img {
+  object-fit: cover;
+  transition: transform .4s ease, filter .4s ease;
+}
+
+.project:hover .project-art img {
+  transform: scale(1.05);
+  filter: contrast(1.08) brightness(1.05);
+}
+
+.project-info {
+  padding: 1.2rem 1.4rem;
+}
+
+.project-tag {
+  color: var(--yellow);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: .4rem;
+  display: block;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: .03em;
+}
+
+/* About Section Dossier */
+.about-dossier {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .about-dossier {
+    grid-template-columns: 4.5fr 7.5fr;
+  }
+}
+
+.portrait-frame {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 42, 133, 0.45);
+  box-shadow: 0 0 35px rgba(255, 42, 133, 0.3);
+  background: linear-gradient(145deg, #260e35, #110517);
+}
+
+.portrait-frame::after {
+  content: "VICE CITY POLICE DEPT // ID-2026-DRS";
+  position: absolute;
+  bottom: 0;
+  inset-inline: 0;
+  padding: .6rem .8rem;
+  background: rgba(9, 4, 14, 0.9);
+  color: var(--yellow);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-align: center;
+  border-top: 1px solid rgba(255, 42, 133, 0.3);
+}
+
+.portrait {
+  width: 100%;
+  height: auto;
+  max-height: 34rem;
+  object-fit: cover;
+  display: block;
+}
+
+/* Vicestar Live Feed Simulation */
+.vicestar-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vicestar-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .9rem 1.2rem;
+  background: rgba(30, 14, 45, 0.6);
+  border: 1px solid rgba(255, 42, 133, 0.2);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+}
+
+/* Footer & Minimap Radar */
+footer {
+  padding-block: 5rem 3rem;
+  background: radial-gradient(circle at 50% 0%, #2a0b38 0%, #09040e 75%);
+  border-top: 2px solid rgba(255, 42, 133, 0.35);
+  position: relative;
+}
+
+.footer-radar {
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid var(--pink);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(255, 42, 133, 0.4);
+}
+
+.footer-radar::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 42, 133, 0.5);
+}
+
+.footer-radar::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background: rgba(255, 42, 133, 0.5);
+}
+
+.radar-sweep {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 70%, rgba(0, 240, 255, 0.4) 100%);
+  animation: radar-spin 3s linear infinite;
+}
+
+@keyframes radar-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.email {
+  display: inline-block;
+  margin: 1.2rem 0 2rem;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--yellow);
+  text-shadow: 0 0 15px rgba(255, 230, 0, 0.4);
+  transition: all .2s;
+  overflow-wrap: anywhere;
+}
+
+.email:hover {
+  color: var(--pink);
+  text-shadow: 0 0 20px rgba(255, 42, 133, 0.7);
+}
+
+/* Dialog / Modal Viewer */
+.viewer {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(1040px, 94vw);
+  max-height: 94svh;
+  overflow: auto;
+  background: #110719;
+  color: #fff;
+  border: 2px solid var(--pink);
+  border-radius: 8px;
+  padding: clamp(1rem, 2.5vw, 2rem);
+  box-shadow: 0 0 50px rgba(255, 42, 133, 0.5);
+}
+
+.viewer::backdrop {
+  background: rgba(5, 2, 8, 0.92);
+  backdrop-filter: blur(8px);
+}
+
+.viewer-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 42, 133, 0.3);
+  padding-bottom: 1rem;
+}
+
+.viewer-head h2 { font-size: clamp(1.6rem, 3.5vw, 2.6rem); }
+.viewer button {
+  background: rgba(255, 42, 133, 0.15);
+  border: 1px solid var(--pink);
+  color: #fff;
+  padding: .6rem 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all .2s;
+}
+
+.viewer button:hover {
+  background: var(--pink);
+  color: #110515;
+}
+
+.viewer-art {
+  height: min(65svh, 680px);
+  position: relative;
+  margin: 1.2rem 0;
+  background: #09030d;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.viewer-art img { object-fit: contain; }
+.viewer-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Track Banner */
+.track-banner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  align-items: end;
+  min-height: clamp(30rem, 72svh, 52rem);
+}
+
+.track-scene { position: absolute; inset: 0; z-index: -1; background: #26132a; }
+.track-scene > img { object-fit: cover; object-position: 70% center; }
+.track-scene::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(9, 4, 14, 0.94) 0%, rgba(18, 8, 28, 0.55) 50%, transparent 80%),
+    linear-gradient(to top, #09040e 0%, transparent 35%);
+}
+
+.track-copy { padding-block: 8.5rem 3.5rem; position: relative; z-index: 2; }
+.track-copy h1 { font-size: clamp(3.6rem, 9.5vw, 8.5rem); margin: 0; }
+.track-copy h1 .highlight {
+  background: linear-gradient(90deg, #ff2a85 0%, #ff7a45 50%, #ffe600 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  filter: drop-shadow(0 0 25px rgba(255, 42, 133, 0.75));
+}
+
+.tool-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.tool-tags li {
+  background: rgba(255, 42, 133, 0.12);
+  border: 1px solid rgba(255, 42, 133, 0.35);
+  color: var(--yellow);
+  font-size: .8rem;
+  font-weight: 700;
+  padding: .3rem .75rem;
+  border-radius: 4px;
+  letter-spacing: .04em;
+}
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.gallery-filters button {
+  background: rgba(24, 11, 35, 0.8);
+  border: 1px solid rgba(255, 42, 133, 0.3);
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+  font-size: .85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.gallery-filters button:hover {
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+.gallery-filters button[aria-pressed="true"] {
+  background: var(--gta-gradient);
+  color: #110515;
+  border-color: transparent;
+  font-weight: 800;
+  box-shadow: 0 0 15px rgba(255, 42, 133, 0.5);
+}
